@@ -27,7 +27,9 @@ struct ContentView: View {
             }
             .tint(.app)
             .navigationTitle("My Expenses")
-            //.navigationDestination(for: ExpenseSheet.self, destination: { /* TODO */ })
+            .navigationDestination(for: ExpenseSheet.self, destination: { expenseSheet in
+                    ExpenseView(expenseSheet: expenseSheet)
+            })
             .sheet(isPresented: $isShowingNewExpenseSheet, content: {
                CreateExpenseSheetView(isShowingNewExpenseSheet: $isShowingNewExpenseSheet)
             })
