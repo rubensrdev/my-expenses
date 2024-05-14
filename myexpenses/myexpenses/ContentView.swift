@@ -9,53 +9,70 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @Query private var expenseSheets: [ExpenseSheet]
+    @State var isShowingNewExpenseSheet = false
+    @State var isShowingConfigurationView = false
+    @State var isShowingAboutView = false
+    
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                ForEach(expenseSheets) { expenseSheet in
+                    NavigationLink(value: expenseSheet) {
+                        
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
+            .tint(.app)
+            .navigationTitle("My Expenses")
+            //.navigationDestination(for: ExpenseSheet.self, destination: { /* TODO */ })
+            .sheet(isPresented: $isShowingNewExpenseSheet, content: {
+               CreateExpenseSheetView(isShowingNewExpenseSheet: $isShowingNewExpenseSheet)
+            })
+            .sheet(isPresented: $isShowingAboutView, content: {
+               AboutView(isShowingAboutView: $isShowingAboutView)
+            })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    Menu(content: {
+                        Button(action: { isShowingNewExpenseSheet = true } ) {
+                            Label("New sheet", systemImage: "doc.badge.plus")
+                        }
+                        Button(action: { isShowingConfigurationView = true } ) {
+                            Label("Configuration", systemImage: "gear")
+                        }
+                        Button(action: { isShowingAboutView = true } ) {
+                            Label("About", systemImage: "info.circle")
+                        }
+                    }, label: {Label("Options", systemImage: "ellipsis.circle") })
                 }
             }
-        } detail: {
-            Text("Select an item")
+            .overlay {
+                if expenseSheets.isEmpty {
+                    ContentUnavailableView(
+                        label: {
+                            Label("No sheets", systemImage: "doc.on.doc")
+                                .foregroundColor(.gray)
+                        }, description: {
+                                Text("Click on \"New sheet\" to create a new one.")
+                        })
+                }
+            }
         }
     }
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+            // modelContext.insert(newItem)
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
+    
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: ExpenseSheet.self, inMemory: true)
 }
