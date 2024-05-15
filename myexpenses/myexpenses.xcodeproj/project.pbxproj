@@ -18,6 +18,7 @@
 		45FF3D4C2BF36F1100E9E41F /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FF3D4B2BF36F1100E9E41F /* ExpenseView.swift */; };
 		45FF3D4E2BF3768A00E9E41F /* CreateExpenseSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FF3D4D2BF3768A00E9E41F /* CreateExpenseSheetView.swift */; };
 		45FF3D502BF3778E00E9E41F /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FF3D4F2BF3778E00E9E41F /* AboutView.swift */; };
+		45FF3D522BF4C79200E9E41F /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FF3D512BF4C79200E9E41F /* ConfigurationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		45FF3D4B2BF36F1100E9E41F /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 		45FF3D4D2BF3768A00E9E41F /* CreateExpenseSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExpenseSheetView.swift; sourceTree = "<group>"; };
 		45FF3D4F2BF3778E00E9E41F /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		45FF3D512BF4C79200E9E41F /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				45FF3D4B2BF36F1100E9E41F /* ExpenseView.swift */,
 				45FF3D4D2BF3768A00E9E41F /* CreateExpenseSheetView.swift */,
 				45FF3D4F2BF3778E00E9E41F /* AboutView.swift */,
+				45FF3D512BF4C79200E9E41F /* ConfigurationView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45FF3D322BF2673F00E9E41F /* ContentView.swift in Sources */,
+				45FF3D522BF4C79200E9E41F /* ConfigurationView.swift in Sources */,
 				45FF3D422BF267F300E9E41F /* ExpenseSheet.swift in Sources */,
 				45FF3D302BF2673F00E9E41F /* myexpensesApp.swift in Sources */,
 				45FF3D4C2BF36F1100E9E41F /* ExpenseView.swift in Sources */,

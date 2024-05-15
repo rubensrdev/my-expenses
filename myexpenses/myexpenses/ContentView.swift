@@ -14,14 +14,13 @@ struct ContentView: View {
     @Query private var expenseSheets: [ExpenseSheet]
     @State var isShowingNewExpenseSheet = false
     @State var isShowingConfigurationView = false
-    @State var isShowingAboutView = false
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(expenseSheets) { expenseSheet in
                     NavigationLink(value: expenseSheet) {
-                        VStack {
+                        HStack {
                             Text("\(expenseSheet.name)")
                         }
                     }
@@ -35,8 +34,8 @@ struct ContentView: View {
             .sheet(isPresented: $isShowingNewExpenseSheet, content: {
                CreateExpenseSheetView(isShowingNewExpenseSheet: $isShowingNewExpenseSheet)
             })
-            .sheet(isPresented: $isShowingAboutView, content: {
-               AboutView(isShowingAboutView: $isShowingAboutView)
+            .sheet(isPresented: $isShowingConfigurationView , content: {
+               CreateExpenseSheetView(isShowingNewExpenseSheet: $isShowingNewExpenseSheet)
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -46,9 +45,6 @@ struct ContentView: View {
                         }
                         Button(action: { isShowingConfigurationView = true } ) {
                             Label("Configuration", systemImage: "gear")
-                        }
-                        Button(action: { isShowingAboutView = true } ) {
-                            Label("About", systemImage: "info.circle")
                         }
                     }, label: {Label("Options", systemImage: "ellipsis.circle") })
                 }
