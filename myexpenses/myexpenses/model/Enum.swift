@@ -11,6 +11,32 @@ enum OperationType: Codable {
     case expense, income
 }
 
-enum Currency: Codable  {
+enum Currency: Codable, CaseIterable, Identifiable, CustomStringConvertible  {
+    
+    var id: Self { self }
+    
     case EUR, USD, GBP, JPY, AUD, CAD, CHF, CNH
+    
+    var description: String {
+        switch self {
+        case .EUR:
+            return "EUR"
+        case .USD:
+            return "USD"
+        case .GBP:
+            return "GBP"
+        case .JPY:
+            return "JPY"
+        case .AUD:
+            return "AUD"
+        case .CAD:
+            return "CAD"
+        case .CHF:
+            return "CHF"
+        case .CNH:
+            return "CNH"
+        }
+    }
+    
+    
 }

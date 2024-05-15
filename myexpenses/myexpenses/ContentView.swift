@@ -21,7 +21,9 @@ struct ContentView: View {
             List {
                 ForEach(expenseSheets) { expenseSheet in
                     NavigationLink(value: expenseSheet) {
-                        
+                        VStack {
+                            Text("\(expenseSheet.name)")
+                        }
                     }
                 }
             }
