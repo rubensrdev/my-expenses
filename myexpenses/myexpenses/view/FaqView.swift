@@ -19,10 +19,25 @@ struct FaqView: View {
                 .bold()
             
             DisclosureGroup("What is the purpose of this app?") {
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl ante, ultrices eget rutrum vel, viverra eget odio. Mauris a ullamcorper dui, nec pulvinar metus.")
+                
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl ante, ultrices eget rutrum vel, viverra eget odio. Mauris a ullamcorper dui, nec pulvinar metus.")
+                
+            }
+            
+            DisclosureGroup("How it works?") {
+                
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl ante, ultrices eget rutrum vel, viverra eget odio. Mauris a ullamcorper dui, nec pulvinar metus.")
+                
+            }
+            
+            DisclosureGroup("What features are available?") {
+                
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl ante, ultrices eget rutrum vel, viverra eget odio. Mauris a ullamcorper dui, nec pulvinar metus.")
+                
             }
             
         }
+        .padding()
     }
 }
 
