@@ -25,7 +25,10 @@ struct ConfigurationView: View {
                AboutView(isShowingAboutView: $isShowingAboutView)
             })
             .sheet(isPresented: $isShowingFaqView, content: {
-               // TODO FAQ VIEW
+               FaqView(isShowingFaqView: $isShowingFaqView)
+            })
+            .sheet(isPresented: $isShowingCategoryView, content: {
+               FaqView(isShowingFaqView: $isShowingFaqView)
             })
         }
     }

@@ -35,7 +35,7 @@ struct ContentView: View {
                CreateExpenseSheetView(isShowingNewExpenseSheet: $isShowingNewExpenseSheet)
             })
             .sheet(isPresented: $isShowingConfigurationView , content: {
-               CreateExpenseSheetView(isShowingNewExpenseSheet: $isShowingNewExpenseSheet)
+               ConfigurationView(isShowingConfigurationView: $isShowingConfigurationView)
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
