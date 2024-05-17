@@ -71,6 +71,9 @@ struct CategoryView: View {
                     .onDelete(perform: deleteCategory)
                 }
                 .navigationTitle("Manage categories")
+                .navigationDestination(for: Category.self, destination: { category in
+                        ModifyCategoryView(category: category)
+                })
                 .sheet(isPresented: $isShowingNewCategoryView, content: { AddCategoryView(isShowingAddCategoryView: $isShowingNewCategoryView) })
                 
                 Group {

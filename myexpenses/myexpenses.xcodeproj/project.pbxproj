@@ -11,6 +11,7 @@
 		45BE789E2BF5FF0100B3B751 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE789D2BF5FF0100B3B751 /* CategoryView.swift */; };
 		45BE78A02BF752DE00B3B751 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE789F2BF752DE00B3B751 /* AddCategoryView.swift */; };
 		45BE78A32BF7573F00B3B751 /* SFSymbolsPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 45BE78A22BF7573F00B3B751 /* SFSymbolsPicker */; };
+		45BE78A52BF75EE300B3B751 /* ModifyCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE78A42BF75EE300B3B751 /* ModifyCategoryView.swift */; };
 		45FF3D302BF2673F00E9E41F /* myexpensesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FF3D2F2BF2673F00E9E41F /* myexpensesApp.swift */; };
 		45FF3D322BF2673F00E9E41F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FF3D312BF2673F00E9E41F /* ContentView.swift */; };
 		45FF3D362BF2674100E9E41F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FF3D352BF2674100E9E41F /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		45BE789B2BF5FC9E00B3B751 /* FaqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqView.swift; sourceTree = "<group>"; };
 		45BE789D2BF5FF0100B3B751 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		45BE789F2BF752DE00B3B751 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		45BE78A42BF75EE300B3B751 /* ModifyCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyCategoryView.swift; sourceTree = "<group>"; };
 		45FF3D2C2BF2673F00E9E41F /* myexpenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myexpenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FF3D2F2BF2673F00E9E41F /* myexpensesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myexpensesApp.swift; sourceTree = "<group>"; };
 		45FF3D312BF2673F00E9E41F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				45FF3D512BF4C79200E9E41F /* ConfigurationView.swift */,
 				45BE789B2BF5FC9E00B3B751 /* FaqView.swift */,
 				45BE789D2BF5FF0100B3B751 /* CategoryView.swift */,
+				45BE78A42BF75EE300B3B751 /* ModifyCategoryView.swift */,
 				45BE789F2BF752DE00B3B751 /* AddCategoryView.swift */,
 			);
 			path = view;
@@ -196,6 +199,7 @@
 			files = (
 				45BE789C2BF5FC9E00B3B751 /* FaqView.swift in Sources */,
 				45FF3D322BF2673F00E9E41F /* ContentView.swift in Sources */,
+				45BE78A52BF75EE300B3B751 /* ModifyCategoryView.swift in Sources */,
 				45BE789E2BF5FF0100B3B751 /* CategoryView.swift in Sources */,
 				45FF3D522BF4C79200E9E41F /* ConfigurationView.swift in Sources */,
 				45FF3D422BF267F300E9E41F /* ExpenseSheet.swift in Sources */,
