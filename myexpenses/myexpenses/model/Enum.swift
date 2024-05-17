@@ -7,7 +7,20 @@
 
 import Foundation
 
-enum OperationType: Codable {
+enum OperationType: Codable, CaseIterable, Identifiable, CustomStringConvertible {
+    
+    var id: Self { self }
+    
+    var description: String {
+        switch self {
+            
+        case .expense:
+            return "Expense"
+        case .income:
+            return "Income"
+        }
+    }
+    
     case expense, income
 }
 

@@ -13,10 +13,14 @@ class Category {
     @Attribute(.unique)
     var id: UUID
     var name: String
+    var type: OperationType
+    var icon: String
     
-    init(id: UUID, name: String) {
+    init(id: UUID, name: String, type: OperationType, icon: String) {
         self.id = id
         self.name = name
+        self.type = type
+        self.icon = icon
     }
     
 }

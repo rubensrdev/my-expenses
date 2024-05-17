@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		45BE789C2BF5FC9E00B3B751 /* FaqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE789B2BF5FC9E00B3B751 /* FaqView.swift */; };
 		45BE789E2BF5FF0100B3B751 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE789D2BF5FF0100B3B751 /* CategoryView.swift */; };
+		45BE78A02BF752DE00B3B751 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE789F2BF752DE00B3B751 /* AddCategoryView.swift */; };
+		45BE78A32BF7573F00B3B751 /* SFSymbolsPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 45BE78A22BF7573F00B3B751 /* SFSymbolsPicker */; };
 		45FF3D302BF2673F00E9E41F /* myexpensesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FF3D2F2BF2673F00E9E41F /* myexpensesApp.swift */; };
 		45FF3D322BF2673F00E9E41F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FF3D312BF2673F00E9E41F /* ContentView.swift */; };
 		45FF3D362BF2674100E9E41F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FF3D352BF2674100E9E41F /* Assets.xcassets */; };
@@ -26,6 +28,7 @@
 /* Begin PBXFileReference section */
 		45BE789B2BF5FC9E00B3B751 /* FaqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqView.swift; sourceTree = "<group>"; };
 		45BE789D2BF5FF0100B3B751 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		45BE789F2BF752DE00B3B751 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
 		45FF3D2C2BF2673F00E9E41F /* myexpenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myexpenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FF3D2F2BF2673F00E9E41F /* myexpensesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myexpensesApp.swift; sourceTree = "<group>"; };
 		45FF3D312BF2673F00E9E41F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BE78A32BF7573F00B3B751 /* SFSymbolsPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +113,7 @@
 				45FF3D512BF4C79200E9E41F /* ConfigurationView.swift */,
 				45BE789B2BF5FC9E00B3B751 /* FaqView.swift */,
 				45BE789D2BF5FF0100B3B751 /* CategoryView.swift */,
+				45BE789F2BF752DE00B3B751 /* AddCategoryView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -129,6 +134,9 @@
 			dependencies = (
 			);
 			name = myexpenses;
+			packageProductDependencies = (
+				45BE78A22BF7573F00B3B751 /* SFSymbolsPicker */,
+			);
 			productName = myexpenses;
 			productReference = 45FF3D2C2BF2673F00E9E41F /* myexpenses.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +165,9 @@
 				Base,
 			);
 			mainGroup = 45FF3D232BF2673F00E9E41F;
+			packageReferences = (
+				45BE78A12BF7573F00B3B751 /* XCRemoteSwiftPackageReference "SFSymbolsPicker" */,
+			);
 			productRefGroup = 45FF3D2D2BF2673F00E9E41F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,6 +199,7 @@
 				45BE789E2BF5FF0100B3B751 /* CategoryView.swift in Sources */,
 				45FF3D522BF4C79200E9E41F /* ConfigurationView.swift in Sources */,
 				45FF3D422BF267F300E9E41F /* ExpenseSheet.swift in Sources */,
+				45BE78A02BF752DE00B3B751 /* AddCategoryView.swift in Sources */,
 				45FF3D302BF2673F00E9E41F /* myexpensesApp.swift in Sources */,
 				45FF3D4C2BF36F1100E9E41F /* ExpenseView.swift in Sources */,
 				45FF3D502BF3778E00E9E41F /* AboutView.swift in Sources */,
@@ -400,6 +412,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		45BE78A12BF7573F00B3B751 /* XCRemoteSwiftPackageReference "SFSymbolsPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alessiorubicini/SFSymbolsPicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45BE78A22BF7573F00B3B751 /* SFSymbolsPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45BE78A12BF7573F00B3B751 /* XCRemoteSwiftPackageReference "SFSymbolsPicker" */;
+			productName = SFSymbolsPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45FF3D242BF2673F00E9E41F /* Project object */;
 }
