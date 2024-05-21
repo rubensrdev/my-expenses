@@ -18,11 +18,11 @@ struct ExpenseView: View {
     var balance: Double  {
         var balanceResult: Double = 0
         for op in self.operations {
-            if op.amount > 0 {
-                balanceResult += op.amount
-            }
-            if op.amount < 0 {
+            if op.operationType == .expense {
                 balanceResult -= op.amount
+            }
+            if op.operationType == .income {
+                balanceResult += op.amount
             }
         }
         return balanceResult
@@ -35,14 +35,14 @@ struct ExpenseView: View {
                 .bold()
             HStack {
                 Text("Balance in sheet: ")
-                if expenseSheet.balance >= 0 {
-                    Text("\(expenseSheet.balance.formatted(.number))")
+                if balance >= 0 {
+                    Text("\(balance.formatted(.number))")
                         .frame(width: 100, height: 50)
                         .background(.capsule)
                         .foregroundStyle(.green)
                         .clipShape(.capsule)
                 } else {
-                    Text("\(expenseSheet.balance.formatted(.number))")
+                    Text("\(balance.formatted(.number))")
                         .frame(width: 100, height: 50)
                         .background(.capsule)
                         .foregroundStyle(.red)
@@ -62,7 +62,7 @@ struct ExpenseView: View {
                                 Text("\(operation.note)")
                                     .font(.caption)
                             }
-                            Text("\(operation.amount.rounded()) €")
+                            Text("\(operation.amount.formatted(.number)) €")
                         }
                     //}
                 }
