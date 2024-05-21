@@ -6,10 +6,27 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ExpenseView: View {
     
     @Bindable var expenseSheet: ExpenseSheet
+    @Environment(\.modelContext) private var modelContext
+    @Query private var operations: [Operation]
+    @State var isShowingNewExpenseView: Bool = false
+    
+    var balance: Double  {
+        var balanceResult: Double = 0
+        for op in self.operations {
+            if op.amount > 0 {
+                balanceResult += op.amount
+            }
+            if op.amount < 0 {
+                balanceResult -= op.amount
+            }
+        }
+        return balanceResult
+    }
     
     var body: some View {
         VStack() {
@@ -33,6 +50,36 @@ struct ExpenseView: View {
                 }
             }
             Spacer()
+            
+            List {
+                ForEach(operations, id: \.self.id) { operation in
+                    //NavigationLink(value: operation) {
+                        HStack {
+                            Image(systemName: "\(operation.category.icon)")
+                            VStack {
+                                Text("\(operation.category.name)")
+                                    .font(.title3)
+                                Text("\(operation.note)")
+                                    .font(.caption)
+                            }
+                            Text("\(operation.amount.rounded()) €")
+                        }
+                    //}
+                }
+            }
+            .sheet(isPresented: $isShowingNewExpenseView, content: {
+                NewExpenseView(isShowingNewExpenseView: $isShowingNewExpenseView)
+            })
+            
+            Group {
+                Button(
+                    action: { isShowingNewExpenseView = true },
+                    label: { Label("Add new expense", systemImage: "plus.circle").labelsHidden() }
+                )
+            }
+            .frame(alignment: .bottomTrailing)
+            .padding()
+            
         }
     }
 }

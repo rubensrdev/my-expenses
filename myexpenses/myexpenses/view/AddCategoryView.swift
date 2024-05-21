@@ -12,8 +12,8 @@ struct AddCategoryView: View {
     
     @Environment(\.modelContext) private var modelContext
     @Binding var isShowingAddCategoryView: Bool
-    @State var name = ""
-    @State var type = OperationType.expense
+    @State private var name = ""
+    @State private var type = OperationType.expense
     @State private var icon = "list.bullet"
     @State private var isPresented = false
     

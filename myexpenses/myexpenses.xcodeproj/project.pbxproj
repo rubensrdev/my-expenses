@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453CDA8D2BFCA95B0030D260 /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CDA8C2BFCA95B0030D260 /* NewExpenseView.swift */; };
 		45BE789C2BF5FC9E00B3B751 /* FaqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE789B2BF5FC9E00B3B751 /* FaqView.swift */; };
 		45BE789E2BF5FF0100B3B751 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE789D2BF5FF0100B3B751 /* CategoryView.swift */; };
 		45BE78A02BF752DE00B3B751 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE789F2BF752DE00B3B751 /* AddCategoryView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		453CDA8C2BFCA95B0030D260 /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
 		45BE789B2BF5FC9E00B3B751 /* FaqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqView.swift; sourceTree = "<group>"; };
 		45BE789D2BF5FF0100B3B751 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		45BE789F2BF752DE00B3B751 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				45BE789D2BF5FF0100B3B751 /* CategoryView.swift */,
 				45BE78A42BF75EE300B3B751 /* ModifyCategoryView.swift */,
 				45BE789F2BF752DE00B3B751 /* AddCategoryView.swift */,
+				453CDA8C2BFCA95B0030D260 /* NewExpenseView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				45FF3D422BF267F300E9E41F /* ExpenseSheet.swift in Sources */,
 				45BE78A02BF752DE00B3B751 /* AddCategoryView.swift in Sources */,
 				45FF3D302BF2673F00E9E41F /* myexpensesApp.swift in Sources */,
+				453CDA8D2BFCA95B0030D260 /* NewExpenseView.swift in Sources */,
 				45FF3D4C2BF36F1100E9E41F /* ExpenseView.swift in Sources */,
 				45FF3D502BF3778E00E9E41F /* AboutView.swift in Sources */,
 				45FF3D482BF26C8800E9E41F /* Enum.swift in Sources */,
