@@ -88,7 +88,6 @@ struct CategoryView: View {
             }
             .searchable(text: $searchText)
         }
-        .padding()
         
     }
     

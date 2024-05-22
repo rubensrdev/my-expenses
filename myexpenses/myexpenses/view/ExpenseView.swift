@@ -36,13 +36,13 @@ struct ExpenseView: View {
             HStack {
                 Text("Balance in sheet: ")
                 if balance >= 0 {
-                    Text("\(balance.formatted(.number))")
+                    Text("\(balance.formatted(.number)) €")
                         .frame(width: 100, height: 50)
                         .background(.capsule)
                         .foregroundStyle(.green)
                         .clipShape(.capsule)
                 } else {
-                    Text("\(balance.formatted(.number))")
+                    Text("\(balance.formatted(.number)) €")
                         .frame(width: 100, height: 50)
                         .background(.capsule)
                         .foregroundStyle(.red)
@@ -62,7 +62,13 @@ struct ExpenseView: View {
                                 Text("\(operation.note)")
                                     .font(.caption)
                             }
-                            Text("\(operation.amount.formatted(.number)) €")
+                            if operation.operationType == .expense {
+                                Text("- \(operation.amount.formatted(.number)) €")	
+                                    .foregroundStyle(.orange)
+                            } else {
+                                Text("+ \(operation.amount.formatted(.number)) €")
+                                    .foregroundStyle(.mint)
+                            }
                         }
                     //}
                 }

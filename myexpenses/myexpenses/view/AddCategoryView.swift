@@ -54,10 +54,11 @@ struct AddCategoryView: View {
                     .buttonStyle(.borderedProminent)
                     
                 }
+                .padding()
             }
             .navigationTitle("Add new category")
         }
-        .padding()
+    
     }
     
     func saveCategory() {
