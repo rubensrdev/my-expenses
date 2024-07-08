@@ -1,5 +1,5 @@
+# My Expenses
 
-![AppIcon-60@3x~car](https://github.com/isthebetadev/my-expenses/assets/160135386/78138cc3-ec57-4614-bca5-599e383775db)
+My Expenses es una aplicación iOS diseñada para ayudarte a gestionar tus gastos e ingresos de manera eficiente. Con My Expenses, puedes crear y organizar hojas de gastos e ingresos, asignando categorías personalizadas que también puedes crear y eliminar según tus necesidades. Desarrollada con Swift, SwiftUI y Swift Data, My Expenses ofrece una interfaz intuitiva y moderna que facilita el seguimiento de tus finanzas personales.
 
-# my-expenses
-My Expenses es una app que permite llevar un registro categorizado de gastos guardados en hojas individuales. Esta desarrollada con SwiftUI y Swift Data. 
+
